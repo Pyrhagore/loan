@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://bgmicro.vercel.app';
 
 export const getAuthToken = () => localStorage.getItem('bg_auth_token');
 export const setAuthToken = (token: string | null) => {
