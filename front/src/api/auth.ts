@@ -20,6 +20,7 @@ export async function login(email: string, password: string): Promise<User> {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
+
         body: formData,
     });
 
