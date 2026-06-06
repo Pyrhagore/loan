@@ -1,5 +1,8 @@
-import { apiRequest, setAuthToken } from './base';
+import { apiRequest, setAuthToken, getAuthToken } from './base';
 import { User } from '../types';
+
+// We need API_URL from base.ts
+const API_URL = import.meta.env.VITE_API_URL || 'https://bgmicro.vercel.app';
 
 export interface LoginResponse {
     access_token: string;
@@ -12,7 +15,7 @@ export async function login(email: string, password: string): Promise<User> {
     formData.append('username', email);
     formData.append('password', password);
 
-    const response = await fetch('http://localhost:8000/auth/login', {
+    const response = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
