@@ -1,0 +1,6 @@
+{
+  "name": "Plateforme de Gestion de Prêts",
+  "description": "Plateforme complète de gestion de microfinance pour demandes de prêts, suivi de remboursements et gestion de comptes clients et agents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
