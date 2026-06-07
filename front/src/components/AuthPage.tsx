@@ -211,7 +211,7 @@ export default function AuthPage({ onLoginSuccess, onBackToHome, initialMode = '
                       required
                       value={nom}
                       onChange={(e) => setNom(e.target.value)}
-                      placeholder="ADJALLA"
+                      placeholder="DUPONT"
                       className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white text-slate-800"
                     />
                   </div>
@@ -228,7 +228,7 @@ export default function AuthPage({ onLoginSuccess, onBackToHome, initialMode = '
                       required
                       value={prenom}
                       onChange={(e) => setPrenom(e.target.value)}
-                      placeholder="Pythagore"
+                      placeholder="Jean"
                       className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white text-slate-800"
                     />
                   </div>
@@ -263,7 +263,7 @@ export default function AuthPage({ onLoginSuccess, onBackToHome, initialMode = '
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="p.adjalla@eg.com"
+                    placeholder="j.dupont@email.com"
                     className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white text-slate-800"
                   />
                 </div>

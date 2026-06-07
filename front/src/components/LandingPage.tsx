@@ -278,7 +278,7 @@ export default function LandingPage({ onNavigate, currentUser }: LandingPageProp
               </div>
               <h3 className="font-display font-semibold text-lg text-slate-900">Demande en 5 Minutes</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Renseignez votre montant, joignez vos pièces justificatives via votre mobile ou ordinateur en un clin d'œil.
+                Renseignez votre montant, joignez vos pièces justificatives via votre mobile or ordinateur en un clin d'œil.
               </p>
             </div>
 
@@ -362,100 +362,23 @@ export default function LandingPage({ onNavigate, currentUser }: LandingPageProp
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="bg-white py-20 px-6 md:px-12 border-t border-slate-150" id="landing-contact">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="font-display text-3xl font-bold text-slate-950">Contactez un expert</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Une interrogation sur votre dossier ? Besoin d'assistance pour déposer vos pièces justificatives ? Nos agents de crédit sont à votre écoute immédiate.
-            </p>
-            
-            <div className="space-y-4 pt-4">
-              <div className="flex items-center space-x-3.5">
-                <div className="p-3 bg-indigo-50 text-indigo-700 rounded-xl">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <dt className="text-xs text-slate-400 font-bold uppercase tracking-wider">Téléphone</dt>
-                  <dd className="text-slate-900 font-semibold font-mono">+229 21 33 00 99</dd>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3.5">
-                <div className="p-3 bg-indigo-50 text-indigo-700 rounded-xl">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <dt className="text-xs text-slate-400 font-bold uppercase tracking-wider">Email professionnel</dt>
-                  <dd className="text-slate-900 font-semibold font-mono">contact@bg-microfinance.com</dd>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3.5">
-                <div className="p-3 bg-indigo-50 text-indigo-700 rounded-xl">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <dt className="text-xs text-slate-400 font-bold uppercase tracking-wider">Siège Social</dt>
-                  <dd className="text-slate-900 font-semibold">Boulevard de l'Europe, Cotonou, Bénin</dd>
-                </div>
-              </div>
-            </div>
+      {/* Call to Action Section */}
+      <section className="bg-white py-20 px-6 md:px-12 text-center border-t border-slate-150" id="landing-cta">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-950">
+            Prêt à concrétiser vos ambitions financières ?
+          </h2>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+            Rejoignez des milliers d'entrepreneurs qui font confiance à BG Microfinance pour leur croissance.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <button
+              onClick={() => onNavigate('register')}
+              className="px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition duration-200 shadow-xl shadow-indigo-100"
+            >
+              Ouvrir mon compte dès maintenant
+            </button>
           </div>
-
-          <div className="lg:col-span-7 bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200">
-            <h3 className="font-display font-semibold text-xl text-slate-950 mb-6">Formulaire de contact rapide</h3>
-            
-            <form onSubmit={(e) => { e.preventDefault(); alert("Merci ! Votre message a bien été envoyé de manière sécurisée. Nous reviendrons vers vous sous peu."); }} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Nom Complet</label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="Ex: Adjalla Pythagore" 
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Email</label>
-                <input 
-                  type="email" 
-                  required
-                  placeholder="Ex: p.adjalla@eg.com" 
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
-                />
-              </div>
-              <div className="sm:col-span-2 space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Sujet</label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="Ex: Demande de renseignement pour crédit commercial" 
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
-                />
-              </div>
-              <div className="sm:col-span-2 space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">Message</label>
-                <textarea 
-                  rows={4}
-                  required
-                  placeholder="Détaillez votre question ou projet..." 
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm resize-none"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-xl transition duration-200"
-                >
-                  Envoyer mon message
-                </button>
-              </div>
-            </form>
-          </div>
-
         </div>
       </section>
 
